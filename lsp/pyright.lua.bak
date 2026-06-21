@@ -1,0 +1,14 @@
+return {
+    settings = {
+        python = {
+            analysis = {
+                typeCheckingMode = "basic",
+
+                diagnosticSeverityOverrides = {
+                    reportCallIssue = "information",
+                    reportArgumentType = "information",
+                },
+            },
+        },
+    },
+}
