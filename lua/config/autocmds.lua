@@ -65,6 +65,7 @@ vim.api.nvim_create_autocmd("CursorHold", {
 --
 --     pattern = {
 --         "cpp",
+--         "java",
 --         "python",
 --         "lua",
 --         "typescript",

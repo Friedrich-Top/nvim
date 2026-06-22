@@ -10,6 +10,7 @@ local function my_on_attach(bufnr)
 
     -- custom mappings
     vim.keymap.set("n", "l", function() api.node.open.edit() end, opts("Open and focus"))
+    vim.keymap.set("n", "<S-Tab>", "<C-w>p", opts("Focus previous window"))
     vim.keymap.set("n", "<C-t>", api.tree.change_root_to_parent,        opts("Up"))
     vim.keymap.set("n", "?",     api.tree.toggle_help,                  opts("Help"))
 end
@@ -21,7 +22,11 @@ return {
     dependencies = {
         "nvim-tree/nvim-web-devicons",
     },
-    keys = { { "<leader>t", "<cmd>NvimTreeToggle<cr>", desc = "Toggle file tree", }, },
+    keys = {
+        { "<leader>t", "<cmd>NvimTreeToggle<cr>", desc = "Toggle file tree", },
+        { "<S-Tab>", "<cmd>NvimTreeFocus<CR>", desc = "Toggle file tree", },
+    },
+
     config = function()
         require("nvim-tree").setup({
             on_attach = my_on_attach,

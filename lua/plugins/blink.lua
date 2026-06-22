@@ -78,6 +78,7 @@ return {
             completion = {
                 documentation = { auto_show = true },
                 menu = {
+                    border = 'single',
                     draw = {
                         columns = {
                             { "label", "label_description", gap = 1 },

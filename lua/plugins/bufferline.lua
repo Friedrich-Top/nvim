@@ -24,6 +24,11 @@ return {
 
         keys = {
             {
+                "<leader>bt",
+                "<cmd>enew<cr>",
+                desc = "New buffer",
+            },
+            {
                 -- "<S-h>",
                 "<leader>bh",
                 "<cmd>BufferLineCyclePrev<cr>",
@@ -35,10 +40,17 @@ return {
                 "<cmd>BufferLineCycleNext<cr>",
                 desc = "Next buffer",
             },
+            -- {
+            --     -- "<C-q>",
+            --     "<leader>bq",
+            --     "<cmd>bdelete<cr>",
+            --     desc = "Close current buffer",
+            -- },
             {
-                -- "<C-q>",
                 "<leader>bq",
-                "<cmd>bdelete<cr>",
+                function()
+                    require("mini.bufremove").delete(0, false)
+                end,
                 desc = "Close current buffer",
             },
         },

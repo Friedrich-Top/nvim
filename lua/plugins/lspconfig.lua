@@ -27,6 +27,7 @@ return {
                 "ts_ls",
                 "html",
                 "jsonls",
+                "bashls"
             },
 
             -- automatic_enable = true,
@@ -39,6 +40,7 @@ return {
                 "ts_ls",
                 "html",
                 "jsonls",
+                "bashls"
             },
         },
     },

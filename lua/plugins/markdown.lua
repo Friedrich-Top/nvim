@@ -7,5 +7,14 @@ return {
         ---@module 'render-markdown'
         ---@type render.md.UserConfig
         opts = {},
+    },
+
+    {
+        "hat0uma/csvview.nvim",
+        ---@module "csvview"
+        ---@type CsvView.Options
+        opts = {},
+        cmd = { "CsvViewEnable", "CsvViewDisable", "CsvViewToggle" },
     }
 }
+
