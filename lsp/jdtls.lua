@@ -12,7 +12,7 @@ return {
     "build.gradle.kts",
   })
 
-  -- 没有项目标记时，使用启动 Neovim 时的目录
+  -- Use the directory where Neovim was started when there is no project marker.
   on_dir(vim.fs.normalize(root or vim.uv.cwd()))
   end,
 
